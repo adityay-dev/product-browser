@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: product-browser
+    runtime: java
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:mysql://reseau.proxy.rlwy.net:18408/railway
+      - key: SPRING_DATASOURCE_USERNAME
+        value: root
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: aKndAPCgdGrDbdnEhYzHwVWjLFSaYBel
